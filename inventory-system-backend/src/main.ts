@@ -7,6 +7,7 @@ import { SeederService } from './seeder/seeder.service';
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
+  app.enableCors();
   app.useGlobalPipes(
     new ValidationPipe({
       whitelist: true,
@@ -21,13 +22,13 @@ async function bootstrap() {
     // Automatically seed only if database is empty
     const isSeeded = await seederService.isDatabaseSeeded();
     if (!isSeeded) {
-      console.log('🌱 Database empty. Running seeder...');
+      console.log('Database empty. Running seeder...');
       await seederService.runSeed();
     } else {
-      console.log('✅ Database already seeded. Skipping seeding.');
+      console.log('Database already seeded. Skipping seeding.');
     }
   } catch (err) {
-    console.error('❌ Seeding failed:', err);
+    console.error('Seeding failed:', err);
   }
 
   // ✅ Setup Swagger
