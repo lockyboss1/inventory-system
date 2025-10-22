@@ -13,9 +13,6 @@ This system allows you to manage products, track stock levels, create purchase o
 3. [Backend Setup](#backend-setup)  
 4. [Frontend Setup](#frontend-setup)  
 5. [Running the Application](#running-the-application)  
-6. [Usage](#usage)  
-7. [Folder Structure](#folder-structure)  
-8. [Contributing](#contributing)  
 
 ---
 
@@ -24,7 +21,7 @@ This system allows you to manage products, track stock levels, create purchase o
 - Product management with stock tracking and reorder threshold  
 - Purchase order creation (manual and automatic when stock is low)  
 - Warehouse capacity management  
-- Adjust stock levels (+/-) to simulate sales or stock adjustments  
+- Adjust stock levels to simulate sales or stock adjustments  
 - Responsive frontend using **TailwindCSS + Shadcn/UI**  
 - REST API with Swagger documentation  
 
