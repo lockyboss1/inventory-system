@@ -16,7 +16,7 @@ export default function App() {
       <Tabs defaultValue="products" className="space-y-4">
         <TabsList>
           <TabsTrigger value="products">Products</TabsTrigger>
-          <TabsTrigger value="orders">Purchase Orders</TabsTrigger>
+          <TabsTrigger value="orders">Purchase Orders </TabsTrigger>
         </TabsList>
         <TabsContent value="products">
           <ProductsTab onStockChange={handleStockChange} />
